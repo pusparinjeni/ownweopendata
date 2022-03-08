@@ -1,0 +1,47 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://github.com/pusparinjeni/ownweopendata/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#BusinessEntity/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix wikidata: <http://wikidata.org/wiki/> .
+@prefix freebase: <http://rdf.freebase.com/ns/> .
+@prefix geonames: <http://sws.geonames.org/> .
+
+
+#Class
+ex:orang a rdfs:class .
+
+#Properties
+ex:memilikiNIK a rdf:property .
+ex:memilikiNIK rdfs:domain ex:orang .
+ex:memilikiNIK rdfs:range xsd:String .
+
+#Instances
+ex:Suparmi a foaf:person, gr:BusinessEntity, ex:orang  .
+ex:Suparmi ex:memilikiNIK "3508036506820007" .
+ex:Suparmi foaf:phone "85707376779" .
+ex:Suparmi gr:streetAddress "Kutisari Selatan 26-C RT 07 RW 03 Kelurahan Kutisari Kecamatan Tenggilis Mejoyo" .
+ex:Suparmi gr:addressLocality "Surabaya, Indonesia" .
+ex:Suparmi foaf:base_near geonames:Surabaya .
+ex:Suparmi gr:offers ex:sembako .
+ex:sembako owl:sameAs wikidata:Grocery_Store .
+
+ex:Ahmadi a foaf:person, gr:BusinessEntity, ex:orang  .
+ex:Ahmadi ex:memilikiNIK "3578060107760010" .
+ex:Ahmadi foaf:phone "87823703083" .
+ex:Ahmadi gr:streetAddress "Banyu Urip Lor 6a/3 Kec. Sawahan" .
+ex:Ahmadi gr:addressLocality "Surabaya, Indonesia" .
+ex:Ahmadi foaf:base_near geonames:Surabaya .
+ex:Ahmadi gr:offers ex:buah .
+ex:buah owl:sameAs freebase:Fruit .
+
+ex:IndraSasongko a foaf:person, gr:BusinessEntity, ex:orang  .
+ex:IndraSasongko ex:memilikiNIK "3578030505710003" .
+ex:IndraSasongko foaf:phone "85746806666" .
+ex:IndraSasongko gr:streetAddress "Ngagel Kebonsari 2/32, Ngagelrejo, Wonokromo" .
+ex:IndraSasongko gr:addressLocality "Surabaya, Indonesia" .
+ex:IndraSasongko foaf:base_near geonames:Surabaya .
+ex:IndraSasongko gr:offers ex:bakery .
+ex:bakery owl:sameAs freebase:Bakery .
